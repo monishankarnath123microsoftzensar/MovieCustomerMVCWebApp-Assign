@@ -1,0 +1,17 @@
+﻿@model MovieCustomerMVCwithAuthen.Models.Customer
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Detail</h2>
+<h4>@Model.Name</h4>
+<p>Date Of Birth: @Model.DOB.ToShortDateString()</p>
+<p>MemberShip Type: @Model.MembershipType.DiscountRate %</p>
+Subcribed: @Html.CheckBoxFor(c => c.IsSubscribe)
+<p>Sign Up Fees: @Model.MembershipType.SignUpFees</p>
+<div>
+    @Html.ActionLink("Back", "Index", "Customer", null, new { @class = "btn btn-success" })
+</div>
+
+

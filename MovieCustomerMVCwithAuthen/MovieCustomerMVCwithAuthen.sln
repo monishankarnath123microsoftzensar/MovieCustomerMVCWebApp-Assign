@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieCustomerMVCwithAuthen", "MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen.csproj", "{9DF384F0-4391-47FA-A3DA-5B18A83E2927}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DF384F0-4391-47FA-A3DA-5B18A83E2927}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF384F0-4391-47FA-A3DA-5B18A83E2927}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF384F0-4391-47FA-A3DA-5B18A83E2927}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF384F0-4391-47FA-A3DA-5B18A83E2927}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F9A5740-BDA6-4B66-9913-CC10DFBCA84C}
+	EndGlobalSection
+EndGlobal

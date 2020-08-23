@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MovieCustomerMVCwithAuthen.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customer Name</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Customer Name</th>
+            <th>Discount Rate</th>
+            <th>Date Of Birth</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(item.Name, "Details", "Customer", new { id = item.Id }, null)</td>
+                <td>@item.MembershipType.DiscountRate</td>
+                <td>@item.DOB.ToShortDateString()</td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+@Html.ActionLink("New", "New", "Customer", null, new { @class = "btn btn-success" })
+

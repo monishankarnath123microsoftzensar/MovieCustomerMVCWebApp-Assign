@@ -1,0 +1,20 @@
+﻿@model MovieCustomerMVCwithAuthen.Models.Movie
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie Details</h2>
+<table class="table table-bordered table-striped">
+    <tr>
+        <td>Movie Name</td>
+        <td>@Model.MovieName</td>
+    </tr>
+    <tr>
+        <td>Genre Name</td>
+        <td>@Model.Genre.GenreName</td>
+    </tr>
+</table>
+<div>
+    @Html.ActionLink("Back", "Index", "Movie", null, new { @class = "btn btn-success" })
+</div>

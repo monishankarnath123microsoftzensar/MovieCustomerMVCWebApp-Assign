@@ -1,0 +1,4 @@
+Display Movie details with the help of CodeFirstApproach
+Display DateofBirth Of customer 
+
+Done in MovieCustomerMVCWithAuthen
