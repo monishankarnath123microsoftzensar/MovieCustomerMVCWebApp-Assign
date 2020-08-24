@@ -5,7 +5,7 @@
 }
 <h2>New Customer</h2>
 
-@using (Html.BeginForm("Create", "Customer"))
+@using (Html.BeginForm("Save", "Customer"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.Name)
@@ -16,7 +16,7 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Customer.DOB)
 
-        @Html.TextBoxFor(m => m.Customer.DOB, "{0:dd MM yyyy}", new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Customer.DOB, "{0:dd MMM yyyy}", new { @class = "form-control" })
 
     </div>
     <div class="form-group">
@@ -29,9 +29,10 @@
         </label>
 
     </div>
+    @Html.HiddenFor(m=>m.Customer.Id)
     @*<div class="form-group">
             @Html.LabelFor(m => m.IsSubscribe)
         </div>*@
     <button type="submit" class="btn btn-primary">Save</button>
-    <button type="reset" class="btn btn-danger">Cancel</button>
+    <button type="reset" class="btn btn-danger">Reset</button>
 }

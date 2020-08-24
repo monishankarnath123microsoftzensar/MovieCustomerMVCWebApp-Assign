@@ -8,37 +8,45 @@
 
     @Html.ActionLink("New +", "New", "Movie", null, new { @class = "btn btn-success" })
 </div>
-<table class="table table-bordered table-striped">
-    <thead>
-        <tr>
-            <th>Movie Id</th>
-            <th>Movie Name</th>
-            <th>Genre</th>
-            <th>Edit</th>
-            <th>Delete</th>
+@if (!Model.Any())
+{
+    <p>No Customer found!!!</p>
+
+}
+else
+{
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Movie Id</th>
+                <th>Movie Name</th>
+                <th>Genre</th>
+                <th>Edit</th>
+                <th>Delete</th>
 
 
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>@item.Id</td>
-            <td>@Html.ActionLink(item.MovieName, "Details", "Movie", new { id = item.Id }, null)</td>
-            <td>@item.Genre.GenreName</td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id})
-            </td>
-            <td>
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@Html.ActionLink(item.MovieName, "Details", "Movie", new { id = item.Id }, null)</td>
+                    <td>@item.Genre.GenreName</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-primary" })
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                    </td>
 
-        </tr>
-        }
+                </tr>
+            }
 
 
-    </tbody>
-</table>
+        </tbody>
+    </table>
+}
 
 

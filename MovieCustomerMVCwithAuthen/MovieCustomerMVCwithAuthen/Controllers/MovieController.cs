@@ -12,7 +12,7 @@ namespace MovieCustomerMVCwithAuthen.Controllers
 {
     public class MovieController : Controller
     {
-        // GET: Movie
+        
         private ApplicationDbContext _context;
         // GET: Movie
         public MovieController()
@@ -42,27 +42,27 @@ namespace MovieCustomerMVCwithAuthen.Controllers
             };
             return View(viewModel);
         }
-        [HttpPost]
-        public ActionResult Create(Movie movie)//Model binding
-        {
-            _context.Movies.Add(movie);
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Movie");
-        }
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var movieTbl = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
-            if (movieTbl == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.Genres = new SelectList(_context.Genres, "Id", "GenreName", movieTbl.GenreId);
-            return View(movieTbl);
-        }
+        //[HttpPost]
+        //public ActionResult Create(Movie movie)//Model binding
+        //{
+        //    _context.Movies.Add(movie);
+        //    _context.SaveChanges();
+        //    return RedirectToAction("Index", "Movie");
+        //}
+        //public ActionResult Edit(int? id)
+        //{
+        //    if (id == null)
+        //    {
+        //        return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+        //    }
+        //    var movieTbl = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
+        //    if (movieTbl == null)
+        //    {
+        //        return HttpNotFound();
+        //    }
+        //    ViewBag.Genres = new SelectList(_context.Genres, "Id", "GenreName", movieTbl.GenreId);
+        //    return View(movieTbl);
+        //}
         //[HttpPost]
         //[ValidateAntiForgeryToken]
         //public ActionResult Edit([Bind(Include = "empId,empName,gender,empSal,DeptId")] EmployeeTbl employeeTbl)
@@ -76,6 +76,38 @@ namespace MovieCustomerMVCwithAuthen.Controllers
         //    ViewBag.DeptId = new SelectList(db.deptTbls, "DeptId", "DeptName", employeeTbl.DeptId);
         //    return View(employeeTbl);
         //}
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+            if (movie.Id == 0)
+            {
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                movieInDb.MovieName = movie.MovieName;
+                
+                movieInDb.GenreId = movie.GenreId;
+                
+            }
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movie");
+        }
+        public ActionResult Edit(int id)
+        {
+            var updateMovie = _context.Movies.SingleOrDefault(c => c.Id == id);
+            if (updateMovie == null)
+            {
+                return HttpNotFound();
+            }
+            var vm = new NewMovieViewModel
+            {
+                Movie = updateMovie,
+                Genres = _context.Genres.ToList()
+            };
+            return View("New", vm);
+        }
         public ActionResult Delete(int? id)
         {
             if (id == null)

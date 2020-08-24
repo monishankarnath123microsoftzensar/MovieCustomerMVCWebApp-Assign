@@ -5,7 +5,7 @@
 }
 
 <h2>New Movie</h2>
-@using (Html.BeginForm("Create", "Movie"))
+@using (Html.BeginForm("Save", "Movie"))
 {
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.MovieName)
@@ -13,12 +13,12 @@
         @Html.TextBoxFor(m => m.Movie.MovieName, new { @class = "form-control" })
 
     </div>
-    
+
     <div class="form-group">
         @Html.LabelFor(m => m.Movie.GenreId)
         @Html.DropDownListFor(m => m.Movie.GenreId, new SelectList(Model.Genres, "Id", "GenreName"), " ", new { @class = "form-control" })
     </div>
-    
+    @Html.HiddenFor(m => m.Movie.Id)
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="reset" class="btn btn-danger">Cancel</button>
 }
