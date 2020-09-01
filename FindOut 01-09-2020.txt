@@ -1,0 +1,4 @@
+1.what is modernizer.js and why we use it
+
+Ans.Modernizr is a JavaScript library that detects which HTML5 and CSS3 features your visitor's browser supports. In detecting feature support, 
+	it allows developers to test for some of the new technologies and then provide fallbacks for browsers that do not support them
