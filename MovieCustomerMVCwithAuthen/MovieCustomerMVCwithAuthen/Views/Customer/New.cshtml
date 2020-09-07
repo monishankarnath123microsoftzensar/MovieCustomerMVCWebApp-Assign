@@ -8,31 +8,38 @@
 @using (Html.BeginForm("Save", "Customer"))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.Customer.Name)
+        @Html.LabelFor(m => m.Name)
 
-        @Html.TextBoxFor(m => m.Customer.Name, new { @class = "form-control" })
-
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m=>m.Name)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Customer.DOB)
+        <div style="display:inline-block">@Html.LabelFor(m => m.DOB)</div><div style="display:inline-block;padding-left:10px">   (MM - DD - YYYY)</div> 
 
-        @Html.TextBoxFor(m => m.Customer.DOB, "{0:dd MMM yyyy}", new { @class = "form-control" })
-
+        @Html.TextBoxFor(m => m.DOB, "{0:dd MM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DOB)
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Customer.MembershipTypeId)
-        @Html.DropDownListFor(m => m.Customer.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), " ", new { @class = "form-control" })
+        @Html.LabelFor(m => m.MembershipTypeId)
+        @Html.DropDownListFor(m => m.MembershipTypeId, new SelectList(Model.MembershipTypes, "Id", "Name"), " ", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m=>m.MembershipTypeId)
     </div>
     <div class="checkbox">
         <label>
-            @Html.CheckBoxFor(m => m.Customer.IsSubscribe) Subscribe.
+            @Html.CheckBoxFor(m => m.IsSubscribe) Subscribe.
         </label>
 
     </div>
-    @Html.HiddenFor(m=>m.Customer.Id)
+    @Html.HiddenFor(m=>m.Id)
+    @Html.AntiForgeryToken()
     @*<div class="form-group">
             @Html.LabelFor(m => m.IsSubscribe)
         </div>*@
     <button type="submit" class="btn btn-primary">Save</button>
     <button type="reset" class="btn btn-danger">Reset</button>
 }
+
+@section scripts
+    {
+    @Scripts.Render("~/bundles/jqueryval")
+    }

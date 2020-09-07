@@ -110,3 +110,10 @@ E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAu
 E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\obj\Debug\MovieCustomerMVCwithAuthen.csproj.GenerateResource.cache
 E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\obj\Debug\MovieCustomerMVCwithAuthen.Migrations.Updatefeesandgenreid.resources
 E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\obj\Debug\MovieCustomerMVCwithAuthen.Migrations.Updatemovienamerequired.resources
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Net.Http.Formatting.dll
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Web.Http.dll
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Web.Http.WebHost.dll
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Net.Http.Formatting.xml
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Web.Http.xml
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Web.Http.WebHost.xml
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\obj\Debug\MovieCustomerMVCwithAuthen.Migrations.UpdateMovietable.resources

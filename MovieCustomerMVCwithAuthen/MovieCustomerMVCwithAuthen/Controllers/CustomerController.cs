@@ -50,23 +50,39 @@ namespace MovieCustomerMVCwithAuthen.Controllers
         //    return RedirectToAction("Index", "Customer");
         //}
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)
         {
-            if(customer.Id == 0)
+            if (!ModelState.IsValid)
             {
-                _context.Customers.Add(customer);
+                var viewModel = new NewCustomerViewModel(customer)
+                {
+                    MembershipTypes = _context.MembershipTypes.ToList()
+                };
+                return View("New",viewModel);
             }
+
             else
             {
-                var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
-                customerInDb.Name = customer.Name;
-                customerInDb.DOB = customer.DOB;
-                customerInDb.MembershipTypeId = customer.MembershipTypeId;
-                customerInDb.IsSubscribe = customer.IsSubscribe;
+                if (customer.Id == 0)
+                {
+                    _context.Customers.Add(customer);
+                }
+                else
+                {
+                    var customerInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                    customerInDb.Name = customer.Name;
+                    customerInDb.DOB = customer.DOB;
+                    customerInDb.MembershipTypeId = customer.MembershipTypeId;
+                    customerInDb.IsSubscribe = customer.IsSubscribe;
+                }
+
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Customer");
             }
-            _context.SaveChanges();
-            return RedirectToAction("Index", "Customer");
         }
+
+    
         public ActionResult Edit(int id)
         {
             var updateCust = _context.Customers.SingleOrDefault(c => c.Id == id);
@@ -74,9 +90,9 @@ namespace MovieCustomerMVCwithAuthen.Controllers
             {
                 return HttpNotFound();
             }
-            var vm = new NewCustomerViewModel
+            var vm = new NewCustomerViewModel(updateCust)
             {
-                Customer = updateCust,
+                
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
             return View("New",vm);

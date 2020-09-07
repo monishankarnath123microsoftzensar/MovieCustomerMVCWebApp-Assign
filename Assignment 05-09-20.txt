@@ -1,0 +1,3 @@
+Validation done in both customer and movie.
+new feilds added in movie.
+client side validation in both customer and movie.
