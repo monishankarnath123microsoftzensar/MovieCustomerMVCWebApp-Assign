@@ -1,0 +1,7 @@
+E:\Dotnettraining\DotnetConsoleApps\ConsoleRefAndOut\ConsoleRefAndOut\bin\Debug\ConsoleRefAndOut.exe.config
+E:\Dotnettraining\DotnetConsoleApps\ConsoleRefAndOut\ConsoleRefAndOut\bin\Debug\ConsoleRefAndOut.exe
+E:\Dotnettraining\DotnetConsoleApps\ConsoleRefAndOut\ConsoleRefAndOut\bin\Debug\ConsoleRefAndOut.pdb
+E:\Dotnettraining\DotnetConsoleApps\ConsoleRefAndOut\ConsoleRefAndOut\obj\Debug\ConsoleRefAndOut.csprojAssemblyReference.cache
+E:\Dotnettraining\DotnetConsoleApps\ConsoleRefAndOut\ConsoleRefAndOut\obj\Debug\ConsoleRefAndOut.csproj.CoreCompileInputs.cache
+E:\Dotnettraining\DotnetConsoleApps\ConsoleRefAndOut\ConsoleRefAndOut\obj\Debug\ConsoleRefAndOut.exe
+E:\Dotnettraining\DotnetConsoleApps\ConsoleRefAndOut\ConsoleRefAndOut\obj\Debug\ConsoleRefAndOut.pdb

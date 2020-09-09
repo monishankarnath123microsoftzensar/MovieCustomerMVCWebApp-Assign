@@ -50,13 +50,13 @@ namespace MovieCustomerMVCwithAuthen
             //    clientId: "",
             //    clientSecret: "");
 
-            //app.UseTwitterAuthentication(
-            //   consumerKey: "",
-            //   consumerSecret: "");
+            app.UseTwitterAuthentication(
+               consumerKey: "Wm9NzFzL9F7vUQdzJyMLopdxo",
+               consumerSecret: "hCOEf320nkBCQQ4uZSs6MOW6OfW8rfpKY7rA5p7ykNsdx5nLgJ");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "447542972829088",
+               appSecret: "49c40063c3d1118a26a1ce33389a3461");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

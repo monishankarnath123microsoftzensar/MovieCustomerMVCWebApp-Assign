@@ -1,0 +1,4 @@
+1.Do update and create using webapi for both movie customer
+2.Try 1 more external login
+
+Done in MovieCustomerApp

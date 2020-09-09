@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MovieCustomerMVCwithAuthen.Models.Customer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="display:inline-block"><h2>Movie List</h2></div>
+
+
+    @if (!Model.Any())
+    {
+        <p>No Customer found!!!</p>
+
+    }
+    else
+    {
+        <table class="table table-bordered table-striped" id="cust-table">
+            <thead>
+                <tr>
+                    <th>Customer Name</th>
+                    <th>Discount Rate</th>
+                    <th>Membership Type</th>
+                    <th>Date Of Birth</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>@Html.ActionLink(item.Name, "Details", "Customer", new { id = item.Id }, null)</td>
+                    <td>@item.MembershipType.DiscountRate</td>
+                    <td>@item.MembershipType.Name</td>
+                    <td>@item.DOB.ToShortDateString()</td>
+                    
+                </tr>
+
+                }
+
+            </tbody>
+        </table>
+
+    }
+    

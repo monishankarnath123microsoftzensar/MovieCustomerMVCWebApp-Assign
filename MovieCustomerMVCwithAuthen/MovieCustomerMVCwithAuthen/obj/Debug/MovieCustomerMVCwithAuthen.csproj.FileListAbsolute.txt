@@ -117,3 +117,5 @@ E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAu
 E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Web.Http.xml
 E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\bin\System.Web.Http.WebHost.xml
 E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\obj\Debug\MovieCustomerMVCwithAuthen.Migrations.UpdateMovietable.resources
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\obj\Debug\MovieCustomerMVCwithAuthen.Migrations.SeedUsers.resources
+E:\Dotnettraining\DotNetWebMVC\MovieCustomerMVCwithAuthen\MovieCustomerMVCwithAuthen\obj\Debug\MovieCustomerMVCwithAuthen.Migrations.AddDrivingliscencetoappUser.resources

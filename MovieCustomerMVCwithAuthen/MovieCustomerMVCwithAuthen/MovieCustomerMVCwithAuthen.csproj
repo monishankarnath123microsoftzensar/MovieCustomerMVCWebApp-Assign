@@ -17,7 +17,7 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
-    <Use64BitIISExpress />
+    <Use64BitIISExpress>false</Use64BitIISExpress>
     <IISExpressSSLPort>44335</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -179,6 +179,8 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CustomerApiController.cs" />
+    <Compile Include="Controllers\Api\GenreController.cs" />
+    <Compile Include="Controllers\Api\MembershipTypeController.cs" />
     <Compile Include="Controllers\Api\MovieApiController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -187,6 +189,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GlobalVariables.cs" />
     <Compile Include="Migrations\202008211654317_Initial Migration.cs" />
     <Compile Include="Migrations\202008211654317_Initial Migration.Designer.cs">
       <DependentUpon>202008211654317_Initial Migration.cs</DependentUpon>
@@ -203,6 +206,14 @@
     <Compile Include="Migrations\202009021500375_Update Movie table.Designer.cs">
       <DependentUpon>202009021500375_Update Movie table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202009070911478_SeedUsers.cs" />
+    <Compile Include="Migrations\202009070911478_SeedUsers.Designer.cs">
+      <DependentUpon>202009070911478_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202009080716076_Add Driving liscence to appUser.cs" />
+    <Compile Include="Migrations\202009080716076_Add Driving liscence to appUser.Designer.cs">
+      <DependentUpon>202009080716076_Add Driving liscence to appUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -212,6 +223,7 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18Yrs.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\NewCustomerViewModel.cs" />
@@ -281,6 +293,8 @@
     <Content Include="Views\Movie\New.cshtml" />
     <Content Include="Views\Movie\Delete.cshtml" />
     <Content Include="Views\Movie\Edit.cshtml" />
+    <Content Include="Views\Movie\ReadOnlyList.cshtml" />
+    <Content Include="Views\Customer\ReadOnlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -310,6 +324,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202009021500375_Update Movie table.resx">
       <DependentUpon>202009021500375_Update Movie table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009070911478_SeedUsers.resx">
+      <DependentUpon>202009070911478_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202009080716076_Add Driving liscence to appUser.resx">
+      <DependentUpon>202009080716076_Add Driving liscence to appUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -14,9 +14,9 @@
         @Html.ValidationMessageFor(m=>m.Name)
     </div>
     <div class="form-group">
-        <div style="display:inline-block">@Html.LabelFor(m => m.DOB)</div><div style="display:inline-block;padding-left:10px">   (MM - DD - YYYY)</div> 
-
-        @Html.TextBoxFor(m => m.DOB, "{0:dd MM yyyy}", new { @class = "form-control" })
+        @*<div style="display:inline-block">@Html.LabelFor(m => m.DOB)</div><div style="display:inline-block;padding-left:10px">   (MM - DD - YYYY)</div>*@
+        @Html.LabelFor(m => m.DOB)
+        @Html.TextBoxFor(m => m.DOB, "{0:dd-MM-yyyy}", new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.DOB)
     </div>
     <div class="form-group">
