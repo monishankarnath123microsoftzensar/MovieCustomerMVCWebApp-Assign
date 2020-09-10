@@ -1,0 +1,7 @@
+E:\Dotnettraining\DotNetMvcMovieAssignment\ConAppJaggedArray\ConAppJaggedArray\bin\Debug\ConAppJaggedArray.exe.config
+E:\Dotnettraining\DotNetMvcMovieAssignment\ConAppJaggedArray\ConAppJaggedArray\bin\Debug\ConAppJaggedArray.exe
+E:\Dotnettraining\DotNetMvcMovieAssignment\ConAppJaggedArray\ConAppJaggedArray\bin\Debug\ConAppJaggedArray.pdb
+E:\Dotnettraining\DotNetMvcMovieAssignment\ConAppJaggedArray\ConAppJaggedArray\obj\Debug\ConAppJaggedArray.csprojAssemblyReference.cache
+E:\Dotnettraining\DotNetMvcMovieAssignment\ConAppJaggedArray\ConAppJaggedArray\obj\Debug\ConAppJaggedArray.csproj.CoreCompileInputs.cache
+E:\Dotnettraining\DotNetMvcMovieAssignment\ConAppJaggedArray\ConAppJaggedArray\obj\Debug\ConAppJaggedArray.exe
+E:\Dotnettraining\DotNetMvcMovieAssignment\ConAppJaggedArray\ConAppJaggedArray\obj\Debug\ConAppJaggedArray.pdb
